@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f5f5f5;
-      background-image: url('background.jpg'); /* Change 'bg.jpg' to your actual background image */
+      background-image: url('background.jpg'); /* Change 'background.jpg' to your actual background image */
       background-size: cover;
       background-position: center;
     }
@@ -25,7 +25,7 @@
       color: #333;
     }
     button {
-      padding: 10px 20px;
+      padding: 15px 30px;
       font-size: 16px;
       margin: 10px;
       cursor: pointer;
@@ -36,6 +36,7 @@
     #yesBtn {
       background-color: #4CAF50; /* Green */
       color: white;
+      transition: all 0.3s ease; /* Smooth transition */
     }
     #noBtn {
       background-color: #f44336; /* Red */
@@ -52,12 +53,16 @@
   </div>
 
   <script>
+    var yesBtn = document.getElementById('yesBtn');
+    var size = 30; // Initial size
+
     document.getElementById('yesBtn').addEventListener('click', function() {
       window.location.href = 'anniversary_page.html'; // Link to anniversary page
     });
 
     document.getElementById('noBtn').addEventListener('click', function() {
-      window.location.reload(); // Reload the page
+      size += 1; // Increase size by 1px
+      yesBtn.style.padding = "15px " + size + "px";
     });
   </script>
 </body>
