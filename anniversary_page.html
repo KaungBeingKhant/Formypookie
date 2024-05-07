@@ -34,9 +34,30 @@
 <body>
   <div class="container">
     <h1>Our Anniversary</h1>
-    <p>Please select our anniversary date:</p>
-    <input type="date" id="anniversaryDate" value="2024-02-26" disabled>
-    <p id="loveMessage">I Love You!</p>
+    <p>Please select the date of our anniversary:</p>
+    <input type="date" id="anniversaryDate">
+    <button id="checkBtn">Check</button>
+    <p id="resultMessage" style="display:none;"></p>
+    <p id="loveMessage" style="display:none;">I Love You!</p>
   </div>
+
+  <script>
+    document.getElementById('checkBtn').addEventListener('click', function() {
+      var anniversaryDate = document.getElementById('anniversaryDate').value;
+      var correctDate = '2024-02-26'; // Change to your actual anniversary date
+
+      if (anniversaryDate === correctDate) {
+        document.getElementById('resultMessage').innerText = 'Correct! You selected the right date.';
+        document.getElementById('resultMessage').style.color = 'green';
+        document.getElementById('resultMessage').style.display = 'block';
+        document.getElementById('loveMessage').style.display = 'block';
+      } else {
+        document.getElementById('resultMessage').innerText = 'Sorry, that is not the correct date.';
+        document.getElementById('resultMessage').style.color = 'red';
+        document.getElementById('resultMessage').style.display = 'block';
+        document.getElementById('loveMessage').style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
