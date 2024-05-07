@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Proposal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>Today, I've prepared something special for you—a journey through a digital realm that reflects our journey together. This is not just any website; it's a journey towards a significant moment. Are you ready to embark with me?</p>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    document.getElementById('yesBtn').addEventListener('click', function() {
+      window.location.href = 'anniversary_page.html'; // Link to page 2
+    });
+
+    document.getElementById('noBtn').addEventListener('click', function() {
+      // Reload the page
+      window.location.reload();
+    });
+  </script>
+</body>
+</html>
