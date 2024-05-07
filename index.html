@@ -9,25 +9,44 @@
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f5f5f5;
+      background-image: url('background.jpg'); /* Change 'background.jpg' to your actual background image */
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px); /* Add a blur effect to the background */
     }
     .container {
-      max-width: 600px;
+      max-width: 400px;
       margin: 100px auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      color: #333;
     }
     button {
       padding: 10px 20px;
       font-size: 16px;
       margin: 10px;
       cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+    #yesBtn {
+      background-color: #4CAF50; /* Green */
+      color: white;
+    }
+    #noBtn {
+      background-color: #f44336; /* Red */
+      color: white;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <h1>Love Proposal</h1>
     <p>Today, I've prepared something special for you—a journey through a digital realm that reflects our journey together. This is not just any website; it's a journey towards a significant moment. Are you ready to embark with me?</p>
     <button id="yesBtn">Yes</button>
     <button id="noBtn">No</button>
@@ -35,12 +54,11 @@
 
   <script>
     document.getElementById('yesBtn').addEventListener('click', function() {
-      window.location.href = 'anniversary_page.html'; // Link to page 2
+      window.location.href = 'anniversary_page.html'; // Link to anniversary page
     });
 
     document.getElementById('noBtn').addEventListener('click', function() {
-      // Reload the page
-      window.location.reload();
+      window.location.reload(); // Reload the page
     });
   </script>
 </body>
